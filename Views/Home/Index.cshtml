@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Categories>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@* <div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div> *@
+
+ <div class="container">
+    <div class="row mt-5">
+      
+            @foreach (var items in Model) {
+                <div class="col">
+                    <a asp-action=@items.Url>
+                    <div class="card">
+                        <div class="card-body mt-5">
+                            <div class="row">
+                                <div class="col">
+                                    @items.Name 
+                                </div>
+
+                                <div class="col">
+                                    @items.Icon
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                
+             }
+    </div>
+ </div>

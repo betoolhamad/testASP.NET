@@ -1,0 +1,36 @@
+@model IEnumerable<Stadiums>
+
+
+<div class="comtainer" dir="rtl">
+    <div class="row">
+        <div class="col">
+                 <div class="row">
+                    @foreach (var i in Model) {
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src=/@i.Images width="120px" height="120px">
+                                        </div>
+
+                                        <div class="col-3">
+                                            @i.Name
+                                        </div>
+
+                                         <div class="col-6 text-end">
+                                            @i.Desc
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+
+                       
+                     }
+                 </div>
+               
+        </div>
+    </div>
+</div>
